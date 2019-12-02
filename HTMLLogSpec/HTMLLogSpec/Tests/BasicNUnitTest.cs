@@ -7,6 +7,7 @@ namespace Tests
     /// BasicNUnitTest test class with NUnit
     /// </summary>
     [TestFixture]
+    [Ignore("oldcode")]
     public class BasicNUnitTest : BaseTest
     {
         /// <summary>
@@ -16,7 +17,7 @@ namespace Tests
         public void SampleTest()
         {
             this.TestObject.Log.LogMessage("Start Test");
-            Assert.IsTrue(true, "True is Not True");
+            Assert.IsTrue(true, "True is True");
         }
     }
 }
