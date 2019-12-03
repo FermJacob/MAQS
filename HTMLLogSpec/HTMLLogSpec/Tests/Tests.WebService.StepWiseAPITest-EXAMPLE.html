@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><header><title>Test Log</title></header><body><p style ="color:blue">
+2019-12-02 19:16:30.901
+INFORMATION:	Setup test object for Tests.WebService.StepWiseAPITest
+</p><p style ="color:Orange">
+2019-12-02 19:16:30.947
+INFORMATION:	INTENT: Get a product in JSON format
+</p><p style ="color:blue">
+2019-12-02 19:16:30.952
+INFORMATION:	Getting event firing web service driver
+</p><p style ="color:gold">
+2019-12-02 19:16:31.017
+INFORMATION:	Sending Get request to base: &#39;http://magenicautomation.azurewebsites.net/&#39; endpoint: &#39;/api/XML_JSON/GetProduct/1&#39; with the media type: &#39;application/json&#39;
+</p><p style ="color:blue">
+2019-12-02 19:16:31.381
+INFORMATION:	Received Get response from http://magenicautomation.azurewebsites.net/api/XML_JSON/GetProduct/1
+Returned OK(200)
+Content:
+{&quot;Id&quot;:1,&quot;Name&quot;:&quot;Tomato Soup&quot;,&quot;Category&quot;:&quot;Groceries&quot;,&quot;Price&quot;:1.0}
+
+
+</p><p style="color:green">
+2019-12-02 19:16:31.558
+SUCCESS:	SoftAssert passed for: GetProduct.
+</p><p style ="color:orange">
+2019-12-02 19:16:31.563
+INFORMATION:	INTENT: Post a new product with Json Format
+</p><p style ="color:gold">
+2019-12-02 19:16:31.603
+INFORMATION:	Sending Post request with content to base: &#39;http://magenicautomation.azurewebsites.net/&#39; endpoint: &#39;/api/XML_JSON/Post&#39; with the media type: &#39;application/json&#39;
+Content:
+{&quot;id&quot;:9999,&quot;name&quot;:&quot;NewProduct&quot;,&quot;category&quot;:&quot;Groceries&quot;,&quot;price&quot;:9.29}
+
+
+</p><p style ="color:blue">
+2019-12-02 19:16:31.672
+INFORMATION:	Received Post response from http://magenicautomation.azurewebsites.net/api/XML_JSON/Post
+Returned OK(200)
+
+</p><p style="color:green">
+2019-12-02 19:16:31.681
+SUCCESS:	SoftAssert passed for: Post Product.
+</p><p style="color:green">
+2019-12-02 19:16:31.695
+SUCCESS:	Test passed
+</p>
