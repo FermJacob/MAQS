@@ -9,6 +9,7 @@ using Magenic.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
 
 namespace UtilitiesUnitTesting
 {
@@ -28,7 +29,15 @@ namespace UtilitiesUnitTesting
         public void StringFormatterCheckForJson()
         {
             string message = StringProcessor.SafeFormatter("{This is a test for JSON}");
-            Assert.AreEqual("{This is a test for JSON}\r\n", message);
+            var isWindows = System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+            if (isWindows)
+            {
+                Assert.AreEqual("{This is a test for JSON}\r\n", message);
+            }
+            else
+            {
+                Assert.AreEqual("{This is a test for JSON}\n", message);
+            }
         }
 
         /// <summary>
