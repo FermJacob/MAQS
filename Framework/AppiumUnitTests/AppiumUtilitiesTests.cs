@@ -64,7 +64,7 @@ namespace AppiumUnitTests
 
             this.TestObject.Log = tempLogger;
             bool successfullyCaptured = AppiumUtilities.CaptureScreenshot(this.TestObject.AppiumDriver, this.TestObject);
-            Assert.IsFalse(successfullyCaptured);
+            Assert.IsFalse(successfullyCaptured, $"Value was {successfullyCaptured}");
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace AppiumUnitTests
         }
 
         /// <summary>
-        /// Verify that SavePageSource creates Directory if it does not exist already 
+        /// Verify that SavePageSource creates Directory if it does not exist already
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Appium)]
